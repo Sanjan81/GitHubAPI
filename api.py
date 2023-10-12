@@ -1,5 +1,7 @@
+import requests
+
 def GitHubAPI(varInputUserID):
-    import requests
+    
     varInputUserID = "Sanjan81"
     r = requests.get('https://api.github.com/users/'+varInputUserID+'/repos', auth=('user', 'pass'))
     if(r.status_code==200):
